@@ -10,6 +10,8 @@ import { MiniBlog } from './Pages/MiniBlog'
 import { SearchPosts } from './Pages/SearchPosts'
 import { HookUseContext } from './HooksPages/HookUseContext'
 import { HookUseReducer } from './HooksPages/HookUseReducer'
+import { HookUseMemo } from './HooksPages/HookUseMemo'
+import { HookUseCallback } from './HooksPages/HookUseCallback'
 
 export const UserContext = React.createContext({ nick: 'elVengador King', age: 1000 })
 
@@ -24,7 +26,9 @@ ReactDOM.render(
     {/* <UserContext.Provider value={{ nick: 'elVengador', age: 100 }}>
       <HookUseContext />
     </UserContext.Provider> */}
-    <HookUseReducer />
+    {/* <HookUseReducer /> */}
+    {/* <HookUseMemo /> */}
+    <HookUseCallback />
   </React.StrictMode>,
   document.getElementById('root')
 )
