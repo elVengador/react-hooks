@@ -1,0 +1,29 @@
+body{
+background-color: rgb(44, 44, 44);
+color: whitesmoke;
+}
+
+.timer .wrapper{
+  width: 300px;
+  margin: auto;
+  border: dashed 2px royalblue;
+  text-align: center;
+}
+
+.timer-value{
+  font-size: 120px;
+}
+
+.posts .wrapper{
+  width: 300px;
+  margin: auto;
+  display: grid;
+  gap: 10px 10px;
+  text-align: center;
+}
+
+.posts .post{
+  padding: 10px;
+  border: dashed 2px royalblue;
+
+}
