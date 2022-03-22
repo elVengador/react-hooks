@@ -36,6 +36,10 @@ export const HookUseEffectFetchData = () => {
             <h2>useEffect</h2>
             <hr />
             <h4>Posts</h4>
+            <p>
+                When you destroy the component and dont finish the
+                request <b>it will through an error</b>, check the solution in mini blog
+            </p>
             <span>Views: {views} </span>
             <button onClick={() => setViews(views + 1)}>+</button>
 
