@@ -1,12 +1,12 @@
 import React, { useState, useMemo } from 'react'
 
 const Viewer = ({ value }) => {
-    /**
-     * This component is renderer only if change valueA or ValueB
-     * if change counter it wont be called, Because we are using useMemo
-     */
-    console.log('render VVV');
-    return <div>Important Value:{value}</div>
+
+    return <div
+        style={{ padding: '5px', margin: '10px 0px' }}
+    >
+        Important Value: {value}
+    </div>
 }
 
 export const HookUseMemo = () => {
@@ -19,15 +19,22 @@ export const HookUseMemo = () => {
 
 
     const complexSum = (A, B) => {
-        console.log('>>>>');
+        /**
+         * this will be executed when dont be memoized
+         */
+        console.log('>. running expensive function!!');
         return A + B
     }
 
     const value = useMemo(() => complexSum(valueA, valueB), [valueA, valueB])
 
     return (
-        <>
-            <h1>Hook useMemo:</h1>
+        <div className='card'>
+            <h2>useMemo</h2>
+            <hr />
+            <h4>Sum + Counter</h4>
+
+            <p>Viewer render only when change value A or value B</p>
             <input
                 type="number"
                 value={valueA}
@@ -46,6 +53,6 @@ export const HookUseMemo = () => {
 
             <h3>{counter}</h3>
             <button onClick={() => setCounter(counter + 1)}>+</button>
-        </>
+        </div>
     )
 }

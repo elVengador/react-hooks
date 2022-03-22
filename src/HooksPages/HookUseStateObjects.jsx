@@ -5,7 +5,10 @@ export const HookSetStateObjects = () => {
     const [name, setName] = useState({ firstName: '', lastName: '' })
 
     return (
-        <div>
+        <div className='card'>
+            <h2>useState</h2>
+            <hr />
+            <h3>Working with Objects</h3>
             <input
                 type="text"
                 value={name.firstName}
@@ -19,7 +22,6 @@ export const HookSetStateObjects = () => {
                 placeholder='Last Name'
             />
 
-            <hr />
 
             <h2 style={{ textAlign: 'center' }}>First Name: {name.firstName}</h2>
             <h2 style={{ textAlign: 'center' }}>Last Name: {name.lastName}</h2>

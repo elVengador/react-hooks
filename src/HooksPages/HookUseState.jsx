@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const HookSetState = () => {
+export const HookUseState = () => {
 
     const initialCounter = 0
 
@@ -19,8 +19,11 @@ export const HookSetState = () => {
     }
 
     return (
-        <div>
-            <h1 style={{ textAlign: 'center' }}>{counter}</h1>
+        <div className='card'>
+            <h2>useState</h2>
+            <hr />
+            <h4>Counter</h4>
+            <h1>{counter}</h1>
             <button onClick={onIncrement}>Increment</button>
             <button onClick={onDecrement}>Decrement</button>
             <button onClick={onReset}>Reset</button>

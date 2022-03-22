@@ -42,17 +42,18 @@ export const HookUseEffect = () => {
     }
 
     return (
-        <div className='timer'>
-            <div className='wrapper' >
-                <h2>Timer</h2>
-                <h1 className='timer-value'>{timer}</h1>
-                <hr />
-                {!play && <button onClick={onPlay}>Play</button>}
-                {play && <button onClick={onPause}>Pause</button>}
-                {play && <button onClick={onStop}>Stop</button>}
-                <button onClick={onReset}>Restart</button>
-                <hr />
-            </div>
+        <div className='card'>
+            <h2>useEffect</h2>
+            <hr />
+            <h4>Timer</h4>
+            <h1 className='timer-value'>{timer}</h1>
+            <hr />
+            {!play && <button onClick={onPlay}>Play</button>}
+            {play && <button onClick={onPause}>Pause</button>}
+            {play && <button onClick={onStop}>Stop</button>}
+            <button onClick={onReset}>Restart</button>
+            <hr />
+
         </div>
     )
 }

@@ -16,10 +16,11 @@ export const SearchPosts = () => {
     }
 
     return (
-        <div className='posts'>
-            <div className="wrapper">
-
-                <h1>Found Posts</h1>
+        <div className='card'>
+            <h2>Custom Hook</h2>
+            <hr />
+            <h4>Search Post</h4>
+            <div className="posts">
                 <input
                     type="text"
                     value={search}

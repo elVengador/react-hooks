@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 export const HookUseEffectFetchData = () => {
 
-    const URI = 'https://jsonplaceholder.typicodeasdfsadf.com/posts'
+    const URI = 'https://jsonplaceholder.typicode.com/posts'
     const [posts, setPosts] = useState([])
     const [views, setViews] = useState(10)
     const [isLoading, setIsLoading] = useState(false)
@@ -32,14 +32,15 @@ export const HookUseEffectFetchData = () => {
 
 
     return (
-        <div className='posts'>
-            <div className="wrapper">
+        <div className='card'>
+            <h2>useEffect</h2>
+            <hr />
+            <h4>Posts</h4>
+            <span>Views: {views} </span>
+            <button onClick={() => setViews(views + 1)}>+</button>
 
-                <h1>Posts</h1>
-                <span>Views: {views}</span>
-                <button onClick={() => setViews(views + 1)}>+</button>
-
-                {error && <h3>{error}</h3>}
+            <div className='posts'>
+                {error && <h3>Error: {error}</h3>}
                 {isLoading && <h3>Loading...</h3>}
                 {
                     !isLoading && posts.map((cur) => <article
@@ -50,6 +51,7 @@ export const HookUseEffectFetchData = () => {
                     </article>)
                 }
             </div>
+
         </div>
     )
 }

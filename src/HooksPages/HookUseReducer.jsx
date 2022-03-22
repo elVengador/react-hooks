@@ -27,8 +27,11 @@ export const HookUseReducer = () => {
     const [state, dispatch] = useReducer(reducer, { counter: 1, variation: 10 })
 
     return (
-        <>
-            <h2>Counter with useReducer:</h2>
+        <div className='card'>
+            <h2>useReducer</h2>
+            <hr />
+            <h3>Counter with useReducer:</h3>
+
             <h2>{state.counter}</h2>
 
             <input
@@ -37,13 +40,18 @@ export const HookUseReducer = () => {
                 onChange={(e) => dispatch({ type: 'CHANGE_VARIATION', payload: +e.currentTarget.value })}
             />
 
-            <button onClick={() => dispatch({ type: 'INCREMENT' })}>INCREMENT</button>
-            <button onClick={() => dispatch({ type: 'DECREMENT' })}>DECREMENT</button>
-            <button onClick={() => dispatch({ type: 'RESET' })}>RESET</button>
-            <button onClick={() => dispatch({ type: 'INCREMENT_BY_VARIATION' })}>INCREMENT_BY_VARIATION BY N</button>
-            <button onClick={() => dispatch({ type: 'DECREMENT_BY_VARIATION' })}>DECREMENT_BY_VARIATION</button>
-            <button onClick={() => dispatch({ type: 'RESET_VARIATION' })}>RESET_VARIATION</button>
+            <p>Controls:</p>
 
-        </>
+            <div>
+                <button onClick={() => dispatch({ type: 'INCREMENT' })}>INCREMENT</button>
+                <button onClick={() => dispatch({ type: 'DECREMENT' })}>DECREMENT</button>
+                <button onClick={() => dispatch({ type: 'RESET' })}>RESET</button>
+                <button onClick={() => dispatch({ type: 'INCREMENT_BY_VARIATION' })}>INCREMENT_BY_VARIATION BY N</button>
+                <button onClick={() => dispatch({ type: 'DECREMENT_BY_VARIATION' })}>DECREMENT_BY_VARIATION</button>
+                <button onClick={() => dispatch({ type: 'RESET_VARIATION' })}>RESET_VARIATION</button>
+            </div>
+
+
+        </div>
     )
 }
